@@ -30,7 +30,7 @@ public class PriceController {
 
     @ApiOperation(value = "Find All Price")
     @PostMapping(value="",
-            consumes = "application/json; charset=UTF-8",
+            consumes = {"*/*"},
             produces = "application/json; charset=UTF-8")
     public ResponseEntity<List<Price>> findAllPaginated() {
         try {
@@ -43,7 +43,7 @@ public class PriceController {
     }
 
     @ApiOperation(value = "Get By Price Id")
-    @PostMapping(value = "/findById/{id}",consumes = "application/json; charset=UTF-8",
+    @PostMapping(value = "/findById/{id}",consumes = {"*/*"},
             produces = "application/json; charset=UTF-8")
     public ResponseEntity<List<Price>> findById(
             @PathVariable(value = "id") String id) {
@@ -58,7 +58,7 @@ public class PriceController {
 
     @ApiOperation(value = "Find by Price Date")
     @PostMapping(value = "/findByDate/{price_date}",
-            consumes = "application/json; charset=UTF-8",
+            consumes = {"*/*"},
             produces = "application/json; charset=UTF-8")
     public ResponseEntity<List<Price>> findByPriceDate(
             @PathVariable(value = "price_date") String price_date) {
