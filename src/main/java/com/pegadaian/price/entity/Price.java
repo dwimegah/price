@@ -16,23 +16,19 @@ public class Price {
     @Id
     private String priceId;
 
-    @Column(precision=10, scale=2)
-    private Double priceSell;
+    private Long priceSell;
 
-    @Column(precision=10, scale=2)
-    private Double priceBuy;
+    private Long priceBuy;
 
     @Column(length = 32)
     private String priceDate;
 
-    @Column(length = 10)
-    private String createdDate;
+    private Long createdDate;
 
     @Column(length = 100)
     private String createdBy;
 
-    @Column(length = 10)
-    private String modifiedDate;
+    private Long modifiedDate;
 
     @Column(length = 100)
     private String modifiedBy;
